@@ -24,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
         ((MyApplication) getApplication()).getAppComponent().inject(this);
 
-        mMainViewModel.onAppConfigLoadedObservable().observeOn(AndroidSchedulers.mainThread())
+        mMainViewModel.onAppConfigLoadedObservable()
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(appConfig -> {
                     Log.d("appConfig == ", appConfig.toString());
+                });
+
+        mMainViewModel.onLoadDataErrorObservable()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(message -> {
+                    Log.d("ErrorObservable", message);
                 });
 
         mMainViewModel.getAppConfig();

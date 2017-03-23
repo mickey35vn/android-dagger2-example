@@ -1,11 +1,11 @@
 package com.yellowpepper.dagger2example.app;
 
 import com.yellowpepper.dagger2example.main.view.MainActivity;
-import com.yellowpepper.dagger2example.module.ApiModule;
-import com.yellowpepper.dagger2example.module.AppModule;
-import com.yellowpepper.dagger2example.module.InteractorModule;
-import com.yellowpepper.dagger2example.module.NetworkModule;
-import com.yellowpepper.dagger2example.module.RepositoryModule;
+import com.yellowpepper.dagger2example.app.module.ApiModule;
+import com.yellowpepper.dagger2example.app.module.AppModule;
+import com.yellowpepper.dagger2example.app.module.InteractorModule;
+import com.yellowpepper.dagger2example.app.module.NetworkModule;
+import com.yellowpepper.dagger2example.app.module.RepositoryModule;
 
 import javax.inject.Singleton;
 

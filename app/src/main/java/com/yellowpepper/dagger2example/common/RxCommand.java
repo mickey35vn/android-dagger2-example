@@ -36,6 +36,7 @@ public class RxCommand<ResultType> {
                             .onErrorResumeNext(error -> Observable.empty())
                             .doOnCompleted(() -> mOnExecuting.onNext(false));
                 })
+                .onErrorResumeNext(error -> Observable.empty())
                 .replay(replayCount).autoConnect();
     }
 

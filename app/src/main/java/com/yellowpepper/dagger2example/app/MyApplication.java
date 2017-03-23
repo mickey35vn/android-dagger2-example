@@ -2,7 +2,7 @@ package com.yellowpepper.dagger2example.app;
 
 import android.app.Application;
 
-import com.yellowpepper.dagger2example.module.AppModule;
+import com.yellowpepper.dagger2example.app.module.AppModule;
 
 /**
  * Created by mickey35vn on 3/23/17.

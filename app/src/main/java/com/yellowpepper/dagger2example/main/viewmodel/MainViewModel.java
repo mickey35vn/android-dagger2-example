@@ -14,21 +14,17 @@ import rx.Observable;
 
 public class MainViewModel {
 
-    private MainInteractor mMainInteractor;
-
     RxCommand<AppConfig> mRequestCommand;
     Observable<AppConfig> mOnSuccessObservable;
 
     @Inject
     public MainViewModel(MainInteractor interactor) {
-        mMainInteractor = interactor;
-
         mRequestCommand = new RxCommand<>(() -> interactor.getAppConfig());
         mOnSuccessObservable = mRequestCommand.onExecuted();
     }
 
     public void getAppConfig() {
-        mRequestCommand.execute();
+        mRequestCommand.executeOnce();
     }
 
     public Observable<AppConfig> onAppConfigLoadedObservable() {

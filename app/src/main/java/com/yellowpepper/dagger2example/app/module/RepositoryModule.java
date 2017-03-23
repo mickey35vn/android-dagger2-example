@@ -1,4 +1,4 @@
-package com.yellowpepper.dagger2example.module;
+package com.yellowpepper.dagger2example.app.module;
 
 import android.content.Context;
 

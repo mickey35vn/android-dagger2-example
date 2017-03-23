@@ -1,4 +1,4 @@
-package com.yellowpepper.dagger2example.module;
+package com.yellowpepper.dagger2example.app.module;
 
 import com.yellowpepper.dagger2example.main.interactor.MainInteractor;
 import com.yellowpepper.dagger2example.main.interactor.impl.MainInteractorImpl;
