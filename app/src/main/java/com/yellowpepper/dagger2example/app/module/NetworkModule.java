@@ -23,17 +23,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetworkModule {
 
-    private final long TIMEOUT = 60;
+    private final long TIME_OUT = 60;
 
     @Provides
     @Singleton
     Retrofit provideRetrofit(SessionRepository sessionRepository) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
-//        builder.interceptors().add(new AuthenticatedHeader(sessionRepository));
-
-        builder.readTimeout(5, TimeUnit.SECONDS);
-        builder.connectTimeout(5, TimeUnit.SECONDS);
+        builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
+        builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
