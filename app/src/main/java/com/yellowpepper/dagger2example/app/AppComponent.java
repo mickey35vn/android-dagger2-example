@@ -1,9 +1,11 @@
 package com.yellowpepper.dagger2example.app;
 
 import com.yellowpepper.dagger2example.main.view.MainActivity;
-import com.yellowpepper.dagger2example.modules.AppModule;
-import com.yellowpepper.dagger2example.modules.NetworkModule;
-import com.yellowpepper.dagger2example.modules.RepositoryModule;
+import com.yellowpepper.dagger2example.module.ApiModule;
+import com.yellowpepper.dagger2example.module.AppModule;
+import com.yellowpepper.dagger2example.module.InteractorModule;
+import com.yellowpepper.dagger2example.module.NetworkModule;
+import com.yellowpepper.dagger2example.module.RepositoryModule;
 
 import javax.inject.Singleton;
 
@@ -16,6 +18,8 @@ import dagger.Component;
 @Singleton
 @Component(modules = {
         AppModule.class,
+        InteractorModule.class,
+        ApiModule.class,
         RepositoryModule.class,
         NetworkModule.class
 })

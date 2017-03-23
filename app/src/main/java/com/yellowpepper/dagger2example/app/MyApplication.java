@@ -2,7 +2,7 @@ package com.yellowpepper.dagger2example.app;
 
 import android.app.Application;
 
-import com.yellowpepper.dagger2example.modules.AppModule;
+import com.yellowpepper.dagger2example.module.AppModule;
 
 /**
  * Created by mickey35vn on 3/23/17.
@@ -17,7 +17,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         mAppComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule(this))
+                .appModule(new AppModule(getApplicationContext()))
                 .build();
     }
 

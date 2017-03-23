@@ -1,9 +1,9 @@
-package com.yellowpepper.dagger2example.repository.impl;
+package com.yellowpepper.dagger2example.data.repository.impl;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.yellowpepper.dagger2example.repository.PreferenceRepository;
+import com.yellowpepper.dagger2example.data.repository.PreferenceRepository;
 
 /**
  * Created by mickey35vn on 3/23/17.

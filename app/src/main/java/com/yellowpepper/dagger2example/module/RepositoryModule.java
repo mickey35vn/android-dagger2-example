@@ -1,11 +1,11 @@
-package com.yellowpepper.dagger2example.modules;
+package com.yellowpepper.dagger2example.module;
 
 import android.content.Context;
 
-import com.yellowpepper.dagger2example.repository.PreferenceRepository;
-import com.yellowpepper.dagger2example.repository.SessionRepository;
-import com.yellowpepper.dagger2example.repository.impl.PreferenceRepositoryImpl;
-import com.yellowpepper.dagger2example.repository.impl.SessionRepositoryImpl;
+import com.yellowpepper.dagger2example.data.repository.PreferenceRepository;
+import com.yellowpepper.dagger2example.data.repository.SessionRepository;
+import com.yellowpepper.dagger2example.data.repository.impl.PreferenceRepositoryImpl;
+import com.yellowpepper.dagger2example.data.repository.impl.SessionRepositoryImpl;
 
 import javax.inject.Singleton;
 

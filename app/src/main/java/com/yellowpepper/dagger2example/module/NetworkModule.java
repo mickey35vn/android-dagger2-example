@@ -1,11 +1,11 @@
-package com.yellowpepper.dagger2example.modules;
+package com.yellowpepper.dagger2example.module;
 
-import android.app.Application;
+import android.content.Context;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.yellowpepper.dagger2example.repository.SessionRepository;
+import com.yellowpepper.dagger2example.data.repository.SessionRepository;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -34,9 +34,9 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    Cache provideOkHttpCache(Application application) {
+    Cache provideOkHttpCache(Context applicationContext) {
         int cacheSize = 10 * 1024 * 1024; // 10 MiB
-        Cache cache = new Cache(application.getCacheDir(), cacheSize);
+        Cache cache = new Cache(applicationContext.getCacheDir(), cacheSize);
         return cache;
     }
 
@@ -75,6 +75,7 @@ public class NetworkModule {
     Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient) {
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("https://your.api.url/v2/")
                 .client(okHttpClient)
                 .build();
         return retrofit;

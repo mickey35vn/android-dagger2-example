@@ -1,7 +1,7 @@
-package com.yellowpepper.dagger2example.repository.impl;
+package com.yellowpepper.dagger2example.data.repository.impl;
 
-import com.yellowpepper.dagger2example.repository.PreferenceRepository;
-import com.yellowpepper.dagger2example.repository.SessionRepository;
+import com.yellowpepper.dagger2example.data.repository.PreferenceRepository;
+import com.yellowpepper.dagger2example.data.repository.SessionRepository;
 
 import java.util.UUID;
 
